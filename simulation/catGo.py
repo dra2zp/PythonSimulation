@@ -17,7 +17,7 @@ rw.newDisplay(width, height, name)
 initState = 0
 
 # Display the state by drawing a cat at that x coordinate
-myimage = dw.loadImage("cat.bmp")
+myimage = dw.loadImage("cat.png")
 
 
 def updateDisplay(state):
