@@ -6,9 +6,8 @@ cat_path = pygame.image.load("cat.jpg")
 
 class DogImage(object):
     def __init__(self, image):
-        pygame.sprite.Sprite.__init__(self)
-        self.image_a = dog_path
-        self.rect = self.image_a.get_rect()
+        self.image = dog_path
+        self.rect = dog_path.get_rect()
         self.a = 0
         self.b = 0
 
@@ -32,9 +31,8 @@ class DogImage(object):
 
 class CatImage(object):
     def __init__(self, image):
-        pygame.sprite.Sprite.__init__(self)
-        self.image_c = cat_path
-        self.rect = self.image_c.get_rect()
+        self.image = cat_path
+        self.rect = cat_path.get_rect()
         self.c = 250
         self.d = 250
 
@@ -61,10 +59,10 @@ class CatImage(object):
     def draw_cat(self, surface):
         surface.blit(self.image, (self.c, self.d))
 
-    def checkCollision(sprite1, sprite2):
-        collision = pygame.sprite.spritecollide(sprite1, sprite2, False)
-        if collision == True:
-            pygame.quit()
+    #def checkCollision(sprite1, sprite2):
+    #    collision = pygame.sprite.spritecollide(sprite1, sprite2, False)
+    #    if collision == True:
+    #        pygame.quit()
 
 pygame.init()
 screen = pygame.display.set_mode((500, 500))
@@ -90,9 +88,9 @@ while running:
             running = False
 
         #CatImage.checkCollision(dogImage.image_a, catImage.image_c)
-        elif (CatImage.checkCollision(dogImage.rect, catImage.rect)):
-            pygame.quit()
-            running = False
+        #elif (CatImage.checkCollision(dogImage.rect, catImage.rect)):
+        #    pygame.quit()
+        #    running = False
 
 
         #elif (dogImage.collide(catImage)):

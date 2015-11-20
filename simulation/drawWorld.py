@@ -6,7 +6,6 @@ def loadImage(filename):
     imageSurface.convert()
     return imageSurface
 
-
 def makeLabel(content, typeface, size, color):
     font = pg.font.SysFont(typeface, size)
     return font.render(content, size, color)
